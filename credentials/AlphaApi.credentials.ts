@@ -1,6 +1,4 @@
-// eslint-disable-next-line n8n-nodes-base/cred-filename-against-convention
 import {
-	IAuthenticateGeneric,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -21,12 +19,4 @@ export class AlphaApi implements ICredentialType {
 			default: '',
 		},
 	];
-	authenticate = {
-		type: 'generic',
-		properties: {
-			qs: {
-				'api_key': '={{$credentials.apiKey}}'
-			}
-		},
-	} as IAuthenticateGeneric;
 }
